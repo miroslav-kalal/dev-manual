@@ -1,0 +1,7 @@
+While using the GIT version for Windows and JetBrains Intellij Idea IDE, the IDE can cause problems when trying to connect using SSH connection with key authentication.
+The problem: IDE shows error message 
+The solution is:
+Install plink, run it from console (the windows key + s and type cmd) with the -i option like this:
+plink -i path-to-ssh-private-key-file git@github.com:username/repository.git
+
+and type y when asked to store the the github server fingerprint in cache.
